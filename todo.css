@@ -97,6 +97,7 @@ form button:hover{
 .fa-trash,
  .fa-check{
     position: none;
+    pointer-events: none;
 
 }
 
@@ -106,7 +107,7 @@ form button:hover{
 }
 
 .fall{
-    transform: translateY(8rem) rotateZ(70deg);
+    transform: translateY(8rem) rotateZ(60deg);
     opacity: 0;
 }
 
