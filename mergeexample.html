@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenation Example</title>
+</head>
+<body>
+   <script>
+       const business_staff = ["Daniel", "Esther", "nathaniel", "Samuel"];
+       const training_staff = ["Stella", "Edna", "Blessing", "Legend", "Simon"];
+
+       for (var i=0; i<business_staff.length; i++){
+        document.write(business_staff[i]);
+        if(i<business_staff.length-1){
+            document.write(',');
+        }
+       }
+
+       document.write('<br />');
+       document.write('<h4> Traning Center Staff</h4>')
+
+       for (var i=0; i<training_staff.length; i++){
+        document.write(training_staff[i]);
+        if(i<training_staff.length-1){
+            document.write(',');
+        }
+       }
+
+       const all_staff=business_staff.concat(training_staff);
+   </script>
+    <p id="demo"></p>
+    <button onclick="document.getElementById('demo').innerHTML = all_staff">Click To Display All Staff</button>
+    
+</body>
+</html>

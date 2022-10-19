@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todo List using pop() and push()</h1>
+
+
+    <script>
+
+        const todolist= ['sleeping','cooking','eating','washing','coding','gaming'];
+        let sn=1;
+        let snA=1;
+        let snD=1
+
+        for(var i=0; i<todolist.length;i++){
+            document.write(sn+"." + todolist[i] + "--" + "<button onclick=deleteTask()>Delete</button>" + "<br />" );
+            sn++;
+        }
+
+        function addTask(value){
+            //adding a new item to the existing array using push()   
+            todolist.push(value); 
+            document.write("<h1>Todo List using pop() and push()</h1>");
+            
+            //iterating through the new array 
+            
+            for(var i=0; i<todolist.length;i++){
+            document.write(snA+"." + todolist[i] + "--" + "<button>Delete</button>" + "<br />" );
+            snA++;
+        }
+     
+
+        }
+
+        function deleteTask(){
+            todolist.pop();
+
+            for(var i=0; i<todolist.length;i++){
+            document.write(snD+"." + todolist[i] + "--" + "<button>Delete</button>" + "<br />" );
+            snD++;
+        }
+        
+
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+<br>
+<br>
+
+<form action="" method="post" id="form_id" onsubmit="addTask(document.getElementById('todolist_task').value)">
+    <label> <b>Task Item:
+
+    </b> </label> <br>
+    <input type="text" value="" id="todolist_task" placeholder="Enter task">
+    <br>
+    <input type="submit" value="Task Submit">
+
+
+
+</form>
+</body>
+</html>
